@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang giới thiệu - Mẫu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f3f5fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#6b7cff;
+      --pill:#f1f3ff;
+      --shadow: 0 10px 30px rgba(33,47,70,0.06);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, #f7f8fb 0%, #f1f4fb 100%);
+      margin:0; padding:40px; color:#111827;
+    }
+    .wrap{
+      max-width:1000px; margin:0 auto; display:grid; gap:24px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:32px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+    }
+    .left{
+      padding-right:8px;
+    }
+    .profile{
+      display:flex; gap:18px; align-items:center;
+    }
+    .avatar{
+      width:86px; height:86px; border-radius:12px; object-fit:cover; flex-shrink:0;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+    }
+    h1{
+      margin:0; font-size:20px; letter-spacing:0.4px; font-weight:800;
+    }
+    .subtitle{ color:var(--muted); font-weight:600; margin-left:8px; font-size:15px }
+    .intro{ color:var(--muted); margin-top:8px; line-height:1.6 }
+    .btns{ margin-top:12px; display:flex; gap:10px }
+    .btn{
+      display:inline-block; padding:8px 12px; border-radius:8px; background:var(--pill); color:#2b2f42; text-decoration:none; font-weight:600; font-size:14px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03);
+    }
+
+    h2.section{
+      margin-top:28px; margin-bottom:10px; font-size:20px;
+    }
+    p.lead{ color:var(--muted); line-height:1.7 }
+
+    .skills{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px }
+    .skill{ background:var(--pill); padding:8px 12px; border-radius:999px; font-size:13px; color:#111827; font-weight:600 }
+
+    .projects ul{ margin:0 0 0 18px; color:var(--muted) }
+
+    .aside-card{
+      background:linear-gradient(180deg, rgba(107,124,255,0.06), rgba(255,255,255,0.02));
+      padding:20px; border-radius:12px; height:fit-content; box-shadow:inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .aside-card h3{ margin:0 0 8px 0 }
+    .contact-row{ margin-bottom:12px }
+    .contact-row b{ display:block; font-weight:700 }
+    .contact-row a{ color:var(--accent); text-decoration:underline }
+
+    footer{ text-align:center; color:var(--muted); font-size:13px; margin-top:8px }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; }
+      .aside-card{ order:2 }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="left">
+        <div class="profile">
+          <img src="avt.jpg" alt="avatar" class="avatar">
+          <div>
+            <div style="display:flex; align-items:center">
+              <h1>Thái Qúi Nam</h1>
+              <div class="subtitle">— Sinh Viên Đại Học Trà Vinh</div>
+            </div>
+            <p class="intro">Giới tính: Nam</p>
+            <p class="intro">Ngày sinh: 28/01/2004.</p>
+             <p class="intro">Lớp: DA22TTB.</p>
+            <p class="intro">Xin chào! Mình là Thái Qúi Nam hiện đang là Sinh viên ĐH Trà Vinh. Mình thích lập trình, thiết kế giao diện và tạo ra sản phẩm cho người dùng.</p>
+            <div class="btns">
+              <a class="btn" href="#">Facebook</a>
+              <a class="btn" href="quinam.280104@gmail.com">Email</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section">Giới thiệu ngắn</h2>
+        <p class="lead">Mình là một sinh viên ngành Công nghệ Thông tin, đam mê phát triển web.</p>
+
+        <h2 class="section">Kỹ năng</h2>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+        </div>
+
+        <h2 class="section">Học vấn</h2>
+        <p class="lead">Đại Học Trà Vinh — Công Nghệ Thông Tin (2022 — 2026)</p>
+
+        <h2 class="section">Sở thích</h2>
+        <p class="lead">Chạy bộ, đá bóng.</p>
+
+      </div>
+
+      <aside>
+        <div class="aside-card">
+          <h3>Liên hệ</h3>
+          <div class="contact-row">
+            <b>Email:</b>
+            <a href="quinam.280104@gmail.com">quinam.280104@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <b>Điện thoại:</b>
+            <div class="lead">0386673442</div>
+          </div>
+          <div class="contact-row">
+            <b>Mạng xã hội</b>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>
+      © 2025 Thái Qúi Nam | <a href="#">Chính sách riêng tư</a>
+    </footer>
+  </div>
+</body>
+</html>
